@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   post 'login',     to: 'sessions#create'
   get 'welcome',    to: 'sessions#welcome'
 
-  resources 'api', only: [] do
-    post 'post', to: 'api/environment#post', on: :collection
-  end
-
+  get 'api/post', to: 'api/post#new_post'
+  post 'api/post', to: 'api/post#post'
   get 'api/environment', to: 'api/environment#environment'
-  get 'api/headers', to: 'api/environment#headers'
+  get 'api/headers', to: 'api/headers#headers'
 end
