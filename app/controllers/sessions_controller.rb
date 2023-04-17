@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    pp params
     user = User.find_by(username: params[:session][:username])
 
     render 'new' and return unless user&.authenticate(params[:session][:password])
