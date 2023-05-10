@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'welcome',    to: 'sessions#welcome'
 
   get 'api/post', to: 'api/post#new_post'
-  post 'api/post', to: 'api/post#post'
   get 'api/environment', to: 'api/environment#environment'
   get 'api/headers', to: 'api/headers#headers'
 end
